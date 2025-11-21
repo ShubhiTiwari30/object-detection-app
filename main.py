@@ -1,42 +1,6 @@
 from ultralytics import YOLO
 import cv2
 import matplotlib.pyplot as plt
-from PIL import Image
-
-import cv2
-import matplotlib.pyplot as plt
-
-# folder ke andar jo image hai uska naam likho
-img = cv2.imread("download.jpg")
-
-if img is None:
-    print("Image not found! Path sahi check karo.")
-else:
-    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-    plt.axis("off")
-    plt.show()
-
-    from ultralytics import YOLO
-import cv2
-import matplotlib.pyplot as plt
-from PIL import Image
-
-# Step 1: Load model
-model = YOLO("yolov8n.pt")
-
-# Step 2: Run detection on your image
-results = model("download.jpg")
-
-# Step 3: Show detection result
-for r in results:
-    detected_img = r.plot()
-    plt.imshow(cv2.cvtColor(detected_img, cv2.COLOR_BGR2RGB))
-    plt.axis("off")
-    plt.show()
-
-from ultralytics import YOLO
-import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 
 # Model load karo (pehle se download hoga)
